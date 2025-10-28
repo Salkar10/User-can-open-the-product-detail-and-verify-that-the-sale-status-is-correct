@@ -14,14 +14,14 @@ class Page:
     def open_url(self, url):
         self.driver.get(url)
 
-    #def input_text(self, EMAIL, email):
-        #pass
+    def input_text(self, EMAIL, email):
+        pass
 
     def find_element(self, *locator):
         return self.driver.find_element(*locator)
-    def get_element(self, *locator):
+    #def get_element(self, *locator):
 
-    #def find_elements(self, *locator):
+    def find_elements(self, *locator):
         return self.driver.find_elements(*locator)
 
 
@@ -50,9 +50,9 @@ class Page:
         )
         return element
 
-    def input_text(self, *locator, text):
-        self.driver.find_element(*locator).clear()
-        self.driver.find_element(*locator).send_keys(text)
+    #def input_text(self, *locator, text):
+        #self.driver.find_element(*locator).clear()
+        #self.driver.find_element(*locator).send_keys(text)
 
     #def input_text(self, *locator, text):
         #element = self.driver.find_element(*locator)
