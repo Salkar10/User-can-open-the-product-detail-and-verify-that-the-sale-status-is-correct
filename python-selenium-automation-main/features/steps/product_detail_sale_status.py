@@ -1,3 +1,5 @@
+from time import sleep
+
 from behave import given, when, then
 from pages.login_page import LoginPage
 from pages.off_plan_page import OffPlanPage
@@ -33,15 +35,17 @@ def step_login(context):
 @when('I click on "off plan" in the left side menu')
 def step_click_off_plan(context):
     """Click on off plan menu"""
+    time.sleep(5)  # Wait for page to load
     off_plan_page = OffPlanPage(context.driver)
     off_plan_page.click_off_plan_menu()
-    time.sleep(2)  # Wait for page to load
+
     print("Clicked on off plan menu")
 
 
 @when('I check the sale status of the first product')
 def step_check_first_product_sale_status(context):
     """Check and store the sale status of the first product"""
+    sleep(5)
     off_plan_page = OffPlanPage(context.driver)
     #wait for off plan product list to load before reading status
 

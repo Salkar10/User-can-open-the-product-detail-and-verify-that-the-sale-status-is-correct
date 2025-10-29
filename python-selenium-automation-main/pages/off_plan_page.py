@@ -34,7 +34,11 @@ class OffPlanPage(Page):
         #wait at least one product appears
 
         wait.until(EC.presence_of_element_located(self.FIRST_PRODUCT_SALE_STATUS))
-        return self.get_text(*self.FIRST_PRODUCT_SALE_STATUS)
+        first_product_status = self.find_element(*self.FIRST_PRODUCT_SALE_STATUS)
+        print(f"First product sale status: {first_product_status.text}")
+        #return first_product_status
+
+
 
     #element = self.find_element(*self.FIRST_PRODUCT_SALE_STATUS)
               #return element.text
